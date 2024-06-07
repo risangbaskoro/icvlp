@@ -1,0 +1,13 @@
+[
+  {
+    "label": "AB9010AK",
+    "video_id": "0001",
+    "source": "MrZygy3",
+    "url": "https://www.youtube.com/watch?v=5LbFA6Ex6i4",
+    "fps": 30,
+    "split": "train",
+    "bboxes": [
+      []
+    ]
+  }
+]
