@@ -8,17 +8,18 @@
     "plates": [
       {
         "label": "AB9010AK",
-        "segment": {
-          "frame_end": 90,
-          "frame_start": 20
-        }
-      },
-      {
-        "label": "AB9010AK",
-        "segment": {
-          "frame_end": 1380,
-          "frame_start": 1290
-        }
+        "frame_start": 1290,
+        "frame_end": 1350,
+        "frames": [
+          {
+            "frame": 22,
+            "bbox": [20,90,60,129]
+          },
+          {
+            "frame": 23,
+            "bbox": [20,90,60,129]
+          }
+        ]
       }
     ]
   }
