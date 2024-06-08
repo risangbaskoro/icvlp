@@ -17,6 +17,17 @@ def check_youtube_dl_version():
     assert version, f"{YOUTUBE_DOWNLOADER} cannot be found in PATH. Please verify your installation."
 
 
+def download_youtube_video(video_url, saveto, video_id):
+    cmd = f"{YOUTUBE_DOWNLOADER} \"{video_url}\" -o \"{os.path.join(saveto, video_id + '.%(ext)s')}\" -f mp4"
+
+    rv = os.system(cmd)
+
+    if not rv:
+        logging.info(f'Finish downloading YouTube video url {video_url}')
+    else:
+        logging.error(f'Unsuccessful downloading YouTube video url {video_url}')
+
+
 def download_youtube_videos(index_file, saveto='raw_videos'):
     content = json.load(open(index_file))
 
@@ -24,26 +35,17 @@ def download_youtube_videos(index_file, saveto='raw_videos'):
         os.mkdir(saveto)
 
     for entry in content:
-        label = entry['label']
         video_id = entry['video_id']
         video_url = entry['url']
 
         if 'youtube' not in video_url and 'youtu.be' not in video_url:
             continue
 
-        if (os.path.exists(os.path.join(saveto, video_id + 'mp4'))
-                or os.path.exists(os.path.join(saveto, video_id + 'mkv'))):
+        if os.path.exists(os.path.join(saveto, video_id + 'mp4')):
             logging.info(f'YouTube video {video_id} is already exists.')
             continue
         else:
-            cmd = f"{YOUTUBE_DOWNLOADER} \"{video_url}\" -o \"{os.path.join(saveto, video_id + '.%(ext)s')}\" -f mp4"
-
-            rv = os.system(cmd)
-
-            if not rv:
-                logging.info(f'Finish downloading YouTube video url {video_url}')
-            else:
-                logging.error(f'Unsuccessful downloading YouTube video url {video_url}')
+            download_youtube_video(video_url, saveto, video_id)
 
             # Reduce the download frequency, avoid spam
             time.sleep(random.uniform(1.0, 1.5))
