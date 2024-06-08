@@ -7,7 +7,7 @@ import cv2
 
 import logging
 
-logging.basicConfig(filename=f"logs/preprocess_{time.strftime('%Y%m%d')}.log", level=logging.DEBUG)
+logging.basicConfig(filename=f"logs/preprocess_{time.strftime('%Y%m%d')}.log", level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
 
@@ -22,19 +22,22 @@ def video_to_frames(video_path, output_dir, label, frame_start, frame_end, fps=2
     video_fps = cap.get(cv2.CAP_PROP_FPS)
     step = int(video_fps // fps)
 
+    frames_extracted = 0
     for frame_number in range(frame_start, frame_end, step):
         video_id = os.path.basename(video_path).split('.')[0]
         output_path = os.path.join(output_dir, f"{video_id}_{label}_{frame_number}.jpeg")
         if os.path.exists(output_path):
-            logging.info(f'Skipping {output_path}: image already exists')
+            logging.debug(f'Skipping {output_path}: image already exists')
             continue
 
         cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number - 1)
         ret, frame = cap.read()
 
-        logging.info(f'Processing {video_path} {frame_start}:{frame_end} to {output_path}')
+        logging.debug(f'Processing {video_path} {frame_start}:{frame_end} to {output_path}')
         cv2.imwrite(output_path, frame)
+        frames_extracted += 1
     cap.release()
+    return frames_extracted
 
 
 def videos_to_frames(index_file):
@@ -42,6 +45,7 @@ def videos_to_frames(index_file):
 
     videos_processed = 0
     frames_extracted = 0
+    plate_extracted = 0
     for video in content:
         filename = video['video_id'] + '.mp4'
         video_path = os.path.join('raw_videos', filename)
@@ -55,12 +59,22 @@ def videos_to_frames(index_file):
         videos_processed += 1
         for plate in plates:
             label = plate['label']
-            video_to_frames(video_path, output_dir, label, plate['frame_start'], plate['frame_end'], fps=fps)
-            frames_extracted += 1
+            frame_start, frame_end = plate['frame_start'], plate['frame_end']
 
-    logging.info(f"{frames_extracted} frames extracted from {videos_processed} videos")
+            if frame_start > frame_end:
+                logging.error(f"Frame start is larger than frame end in video_id:{filename} and label:{label}")
+                continue
+
+            frames_extracted += video_to_frames(video_path, output_dir, label, frame_start, frame_end, fps=fps)
+            plate_extracted += 1
+
+    logging.info(
+        f"{frames_extracted} frames extracted ({plate_extracted} plates processed) from {videos_processed} videos"
+    )
 
 
 if __name__ == '__main__':
+    since = time.time()
     input_file = 'icvlp_v0.1.json'
     videos_to_frames(input_file)
+    logging.info(f'Finished processing {input_file} in {time.time() - since:.2f} seconds')
