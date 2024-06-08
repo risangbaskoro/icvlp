@@ -2,24 +2,45 @@
   {
     "video_id": "0001",
     "source": "MrZygy3",
-    "url": "https://www.youtube.com/watch?v=5LbFA6Ex6i4",
+    "url": "https://www.youtube.com/watch?v=jsxYPqyK4Bs",
     "fps": 30,
     "split": "train",
     "plates": [
       {
-        "label": "AB9010AK",
-        "frame_start": 1290,
-        "frame_end": 1350,
-        "frames": [
-          {
-            "frame": 22,
-            "bbox": [20,90,60,129]
-          },
-          {
-            "frame": 23,
-            "bbox": [20,90,60,129]
-          }
-        ]
+        "label": "AB8381FU",
+        "frame_start": 750,
+        "frame_end": 810,
+        "frames": []
+      },
+      {
+        "label": "AB8812VK",
+        "frame_start": 960,
+        "frame_end": 1020,
+        "frames": []
+      },
+      {
+        "label": "AB8360DT",
+        "frame_start": 1350,
+        "frame_end": 1376,
+        "frames": []
+      },
+      {
+        "label": "AB8667EU",
+        "frame_start": 1920,
+        "frame_end": 1967,
+        "frames": []
+      },
+      {
+        "label": "AB8437BY",
+        "frame_start": 2640,
+        "frame_end": 2730,
+        "frames": []
+      },
+      {
+        "label": "G1618JA",
+        "frame_start": 2820,
+        "frame_end": 2895,
+        "frames": []
       }
     ]
   }
