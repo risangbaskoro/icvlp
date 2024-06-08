@@ -1,4 +1,9 @@
-## Indonesian Commercial Vehicle Dataset
+![Banner Image](https://data.risangbaskoro.com/cvlpr/banner.png)
+
+<h2 align="center">
+    Indonesian Commercial Vehicle License Plate (ICVLP)
+    Dataset
+</h2>
 
 > [!WARNING]
 > Work in progress.
