@@ -3,8 +3,7 @@
     "video_id": "0001",
     "source": "MrZygy3",
     "url": "https://www.youtube.com/watch?v=jsxYPqyK4Bs",
-    "fps": 30,
-    "split": "train",
+    "fps": 6,
     "plates": [
       {
         "label": "AB8381FU",
@@ -38,8 +37,32 @@
       },
       {
         "label": "G1618JA",
-        "frame_start": 2820,
-        "frame_end": 2895,
+        "frame_start": 2823,
+        "frame_end": 2898,
+        "frames": []
+      },
+      {
+        "label": "AB9260HN",
+        "frame_start": 3015,
+        "frame_end": 3075,
+        "frames": []
+      },
+      {
+        "label": "AB9821ZN",
+        "frame_start": 3480,
+        "frame_end": 3540,
+        "frames": []
+      },
+      {
+        "label": "AB8715AY",
+        "frame_start": 3810,
+        "frame_end": 3870,
+        "frames": []
+      },
+      {
+        "label": "AD1486ZJ",
+        "frame_start": 4020,
+        "frame_end": 4080,
         "frames": []
       }
     ]
