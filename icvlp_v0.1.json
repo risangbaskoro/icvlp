@@ -1,13 +1,25 @@
 [
   {
-    "label": "AB9010AK",
     "video_id": "0001",
     "source": "MrZygy3",
     "url": "https://www.youtube.com/watch?v=5LbFA6Ex6i4",
     "fps": 30,
     "split": "train",
-    "bboxes": [
-      []
+    "plates": [
+      {
+        "label": "AB9010AK",
+        "segment": {
+          "frame_end": 90,
+          "frame_start": 20
+        }
+      },
+      {
+        "label": "AB9010AK",
+        "segment": {
+          "frame_end": 1380,
+          "frame_start": 1290
+        }
+      }
     ]
   }
 ]
