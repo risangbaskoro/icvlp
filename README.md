@@ -1,4 +1,4 @@
-![Banner Image](https://data.risangbaskoro.com/cvlpr/banner.png)
+![Banner Image](https://data.risangbaskoro.com/icvlp/banner.png)
 
 <h2 align="center">
     Indonesian Commercial Vehicle License Plate (ICVLP)
