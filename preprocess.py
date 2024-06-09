@@ -5,6 +5,8 @@ import time
 
 import cv2
 
+from tqdm import tqdm
+
 import logging
 
 logging.basicConfig(filename=f"logs/preprocess_{time.strftime('%Y%m%d')}.log", level=logging.INFO)
@@ -23,9 +25,9 @@ def video_to_frames(video_path, output_dir, label, frame_start, frame_end, fps=2
     step = int(video_fps // fps)
 
     frames_extracted = 0
-    for frame_number in range(frame_start, frame_end, step):
+    for frame_number in range(frame_start, frame_end + 1, step):
         video_id = os.path.basename(video_path).split('.')[0]
-        output_path = os.path.join(output_dir, f"{video_id}_{label}_{frame_number}.jpeg")
+        output_path = os.path.join(output_dir, f"{video_id}_{frame_number}_{label}.jpeg")
         if os.path.exists(output_path):
             logging.debug(f'Skipping {output_path}: image already exists')
             continue
@@ -57,7 +59,7 @@ def videos_to_frames(index_file):
             continue
 
         videos_processed += 1
-        for plate in plates:
+        for plate in tqdm(plates, desc=f"{video_path}"):
             label = plate['label']
             frame_start, frame_end = plate['frame_start'], plate['frame_end']
 
@@ -74,6 +76,9 @@ def videos_to_frames(index_file):
 
 
 if __name__ == '__main__':
+    if not os.path.exists("frames"):
+        os.mkdir("frames")
+
     since = time.time()
     input_file = 'icvlp_v0.1.json'
     videos_to_frames(input_file)
