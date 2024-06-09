@@ -1,7 +1,8 @@
+#!/usr/bin/env python
+
 import json
 import logging
 import os.path
-import sys
 
 
 def get_plate_instances(target_plate):
