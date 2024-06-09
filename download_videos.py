@@ -18,7 +18,13 @@ def check_youtube_dl_version():
 
 
 def download_youtube_video(video_url, saveto, video_id):
-    cmd = f"{YOUTUBE_DOWNLOADER} \"{video_url}\" -o \"{os.path.join(saveto, video_id + '.%(ext)s')}\" -f mp4"
+    cmd = [
+        YOUTUBE_DOWNLOADER,
+        video_url,
+        f"-o {os.path.join(saveto, video_id + '.%(ext)s')}",
+        "--format mp4"
+    ]
+    cmd = ' '.join(cmd)
 
     rv = os.system(cmd)
 
