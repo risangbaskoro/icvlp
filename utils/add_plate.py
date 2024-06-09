@@ -4,6 +4,30 @@ import os.path
 import sys
 
 
+def get_plate_instances(target_plate):
+    target_plate = target_plate.upper()
+
+    content = json.load(open(os.path.join(os.getcwd(), 'icvlp_v0.1.json')))
+
+    instances = []
+
+    for video in content:
+        for plate in video['plates']:
+            label = plate['label']
+            if target_plate == label.upper():
+                instances.append(plate)
+
+    return instances
+
+
+def check_plate():
+    plate = input('Check Number Plate: ').upper()
+    plates = get_plate_instances(plate)
+
+    print(json.dumps(plates, indent=2))
+    print("\nNumber of instances:", len(plates))
+
+
 def add_plate(content, target_video_id, new_label, new_frame_start, new_frame_end):
     video = next((video for video in content if video['video_id'] == target_video_id), None)
     plates = video['plates']
@@ -18,14 +42,9 @@ def add_plate(content, target_video_id, new_label, new_frame_start, new_frame_en
     return json.loads(json.dumps(new_plate))
 
 
-def main():
+def add_plate_to_video(id):
     input_file = os.path.join(os.getcwd(), 'icvlp_v0.1.json')
     content = json.load(open(input_file))
-
-    video_id = int(input('Enter video_id: '))
-
-    if isinstance(video_id, int):
-        video_id = str(video_id).zfill(4)
 
     index = next((index for index, video in enumerate(content) if video['video_id'] == video_id), None)
 
@@ -49,14 +68,37 @@ def main():
     adds = add_plate(content, video_id, label, frame_start, frame_end)
     assert content[index]['plates'][-1] == adds
 
+    print()
     print(json.dumps(adds, indent=2))
+    print()
 
     json.dump(content, open(input_file, 'w'), indent=2)
 
 
 if __name__ == '__main__':
     repeat = True
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    check_exists = input('Do you want to check if the plate exists first? (y/N): ').lower() == 'y'
+
+    video_id = None
+
     while repeat:
-        main()
-        again = input('Continue?')
-        repeat = again == ''
+        if not video_id and not check_exists:
+            video_id = int(input('Enter video_id: '))
+
+            if isinstance(video_id, int):
+                video_id = str(video_id).zfill(4)
+
+        os.system('cls' if os.name == 'nt' else 'clear')
+        if check_exists:
+            check_plate()
+            check_exists = False
+        else:
+            print(f"video_id {video_id} ({video_id}.mp4) \n")
+            add_plate_to_video(video_id)
+
+        again = input('Continue? (ENTER/c/q) ')
+
+        check_exists = again.lower() == 'c'
+        repeat = again.lower() != 'q'

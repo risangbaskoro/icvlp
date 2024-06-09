@@ -274,6 +274,24 @@
         "frame_start": 26525,
         "frame_end": 26570,
         "frames": []
+      },
+      {
+        "label": "BE9294BA",
+        "frame_start": 26930,
+        "frame_end": 26945,
+        "frames": []
+      },
+      {
+        "label": "R1431RK",
+        "frame_start": 31880,
+        "frame_end": 31900,
+        "frames": []
+      },
+      {
+        "label": "AB8184SK",
+        "frame_start": 32305,
+        "frame_end": 32370,
+        "frames": []
       }
     ]
   }
