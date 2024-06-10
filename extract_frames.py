@@ -32,8 +32,12 @@ def video_to_frames(video_path, output_dir, label, frame_start, frame_end, fps=2
         ret, frame = cap.read()
 
         logging.debug(f'Processing {video_path} {frame_start}:{frame_end} to {output_path}')
-        cv2.imwrite(output_path, frame)
-        frames_extracted += 1
+        try:
+            cv2.imwrite(output_path, frame)
+            frames_extracted += 1
+        except Exception as e:
+            logging.error(f'Cannot write to {output_path}: {e}')
+
     cap.release()
     return frames_extracted
 
