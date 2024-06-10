@@ -378,5 +378,181 @@
         "frames": []
       }
     ]
+  },
+  {
+    "video_id": "0002",
+    "source": "Alan Suherlan",
+    "url": "https://www.youtube.com/watch?v=5JvINxFzRiQ",
+    "fps": 6,
+    "plates": [
+      {
+        "label": "K7193QB",
+        "frame_start": 0,
+        "frame_end": 15,
+        "frames": []
+      },
+      {
+        "label": "K7826DC",
+        "frame_start": 95,
+        "frame_end": 132,
+        "frames": []
+      },
+      {
+        "label": "B2296VGA",
+        "frame_start": 1010,
+        "frame_end": 1050,
+        "frames": []
+      },
+      {
+        "label": "F7501WA",
+        "frame_start": 2140,
+        "frame_end": 2155,
+        "frames": []
+      },
+      {
+        "label": "Z8744HJ",
+        "frame_start": 2460,
+        "frame_end": 2515,
+        "frames": []
+      },
+      {
+        "label": "A9501U",
+        "frame_start": 3455,
+        "frame_end": 3525,
+        "frames": []
+      },
+      {
+        "label": "D7699AL",
+        "frame_start": 7331,
+        "frame_end": 7396,
+        "frames": []
+      },
+      {
+        "label": "B7015NOW",
+        "frame_start": 8095,
+        "frame_end": 8164,
+        "frames": []
+      },
+      {
+        "label": "AA7733QD",
+        "frame_start": 9736,
+        "frame_end": 9776,
+        "frames": []
+      },
+      {
+        "label": "K7826DC",
+        "frame_start": 10855,
+        "frame_end": 10890,
+        "frames": []
+      },
+      {
+        "label": "AB7128KA",
+        "frame_start": 11830,
+        "frame_end": 11855,
+        "frames": []
+      },
+      {
+        "label": "AB7128KA",
+        "frame_start": 11875,
+        "frame_end": 11885,
+        "frames": []
+      },
+      {
+        "label": "AG7016UE",
+        "frame_start": 14630,
+        "frame_end": 14660,
+        "frames": []
+      },
+      {
+        "label": "B7294VGA",
+        "frame_start": 15285,
+        "frame_end": 15310,
+        "frames": []
+      },
+      {
+        "label": "AA7654QD",
+        "frame_start": 15724,
+        "frame_end": 15754,
+        "frames": []
+      },
+      {
+        "label": "Z7720ME",
+        "frame_start": 16550,
+        "frame_end": 16575,
+        "frames": []
+      },
+      {
+        "label": "E7194YC",
+        "frame_start": 17175,
+        "frame_end": 17185,
+        "frames": []
+      },
+      {
+        "label": "E7914YC",
+        "frame_start": 17175,
+        "frame_end": 17190,
+        "frames": []
+      },
+      {
+        "label": "E7194YC",
+        "frame_start": 17475,
+        "frame_end": 17490,
+        "frames": []
+      },
+      {
+        "label": "K7193QB",
+        "frame_start": 18010,
+        "frame_end": 18040,
+        "frames": []
+      },
+      {
+        "label": "G7501QD",
+        "frame_start": 18615,
+        "frame_end": 18650,
+        "frames": []
+      },
+      {
+        "label": "R1734FA",
+        "frame_start": 19400,
+        "frame_end": 19440,
+        "frames": []
+      },
+      {
+        "label": "R1734FA",
+        "frame_start": 18670,
+        "frame_end": 18680,
+        "frames": []
+      },
+      {
+        "label": "G7312OD",
+        "frame_start": 20145,
+        "frame_end": 20160,
+        "frames": []
+      },
+      {
+        "label": "Z1903YC",
+        "frame_start": 20382,
+        "frame_end": 20407,
+        "frames": []
+      },
+      {
+        "label": "AB7023WF",
+        "frame_start": 21320,
+        "frame_end": 21360,
+        "frames": []
+      },
+      {
+        "label": "H7262OQ",
+        "frame_start": 21785,
+        "frame_end": 21800,
+        "frames": []
+      },
+      {
+        "label": "H7262OQ",
+        "frame_start": 21835,
+        "frame_end": 21850,
+        "frames": []
+      }
+    ]
   }
 ]
