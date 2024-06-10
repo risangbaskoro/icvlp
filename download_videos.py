@@ -23,8 +23,9 @@ def download_youtube_video(video_url, saveto, video_id):
     cmd = [
         YOUTUBE_DOWNLOADER,
         video_url,
-        f"-o {os.path.join(saveto, video_id + '.%(ext)s')}",
-        "--format mp4"
+        f"-o {os.path.join(saveto, video_id + '.mp4')}",
+        f"--format mp4",
+        "-f 'bestvideo[height<=1080][ext=mp4]+best'"
     ]
     cmd = ' '.join(cmd)
 
