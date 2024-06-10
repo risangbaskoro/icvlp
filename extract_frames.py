@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import json
 import os
 import sys
@@ -7,18 +6,12 @@ import time
 
 import cv2
 
-from tqdm import tqdm
+from tqdm import tqdm, trange
 
 import logging
 
-logging.basicConfig(filename=f"logs/preprocess_{time.strftime('%Y%m%d')}.log", level=logging.INFO)
+logging.basicConfig(filename=f"logs/extract_frames_{time.strftime('%Y%m%d')}.log", level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
-
-
-def enable_hardware_acceleration():
-    if os.popen('nvidia-smi').read():
-        return "-hwaccel cuda "
-    return ""
 
 
 def video_to_frames(video_path, output_dir, label, frame_start, frame_end, fps=25):
@@ -27,7 +20,8 @@ def video_to_frames(video_path, output_dir, label, frame_start, frame_end, fps=2
     step = int(video_fps // fps)
 
     frames_extracted = 0
-    for frame_number in range(frame_start, frame_end + 1, step):
+    for frame_number in trange(frame_start, frame_end + 1, step,
+                               desc=label, position=1, leave=False):
         video_id = os.path.basename(video_path).split('.')[0]
         output_path = os.path.join(output_dir, f"{video_id}_{frame_number}_{label}.jpeg")
         if os.path.exists(output_path):
@@ -53,6 +47,11 @@ def videos_to_frames(index_file):
     for video in content:
         filename = video['video_id'] + '.mp4'
         video_path = os.path.join('raw_videos', filename)
+
+        if not os.path.exists(video_path):
+            logging.info(f'Skipping {video_path}: video does not exist')
+            continue
+
         output_dir = 'frames'
         plates = video['plates']
         fps = video['fps']
@@ -61,7 +60,7 @@ def videos_to_frames(index_file):
             continue
 
         videos_processed += 1
-        for plate in tqdm(plates, desc=f"{video_path}"):
+        for plate in tqdm(plates, desc=f"{video_path}", position=0, leave=False):
             label = plate['label']
             frame_start, frame_end = plate['frame_start'], plate['frame_end']
 
