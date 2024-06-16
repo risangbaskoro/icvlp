@@ -34,6 +34,7 @@ def extract_frame(video_path, output_dir, plate, instance_num):
         plates_extracted += 1
         instance_num += 1
 
+    cap.release()
     return plates_extracted
 
 
