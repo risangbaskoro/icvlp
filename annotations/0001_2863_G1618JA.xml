@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_2863_G1618JA.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>977.491150</xmin>
+            <ymin>739.315735</ymin>
+            <xmax>1141.405762</xmax>
+            <ymax>813.247192</ymax>
+        </bndbox>
+    </object>
+</annotation>
