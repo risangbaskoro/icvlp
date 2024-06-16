@@ -21,11 +21,12 @@ def get_bounding_boxes(xml_path):
         return
 
     bbox = obj.find('bndbox')
-    x_min = round(float(bbox.find('xmin').text))
-    y_min = round(float(bbox.find('ymin').text))
-    x_max = round(float(bbox.find('xmax').text))
-    y_max = round(float(bbox.find('ymax').text))
-    bbox = [x_min, y_min, x_max, y_max]
+    bbox = [
+        round(float(bbox.find('xmin').text)),
+        round(float(bbox.find('ymin').text)),
+        round(float(bbox.find('xmax').text)),
+        round(float(bbox.find('ymax').text))
+    ]
 
     return {
         'frame': int(frame),
