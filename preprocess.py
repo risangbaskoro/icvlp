@@ -28,7 +28,7 @@ def extract_frame(video_path, output_dir, plate, instance_num):
         cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
         ret, image = cap.read()
 
-        # x_min, y_min, xmax, y_max
+        # y_min:y_max, x_min:x_max
         img = image[bbox[1]:bbox[3], bbox[0]:bbox[2]]
         cv2.imwrite(output_path, img)
         plates_extracted += 1
