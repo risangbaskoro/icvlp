@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_7370_AD1377HJ.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>1536.200073</xmin>
+            <ymin>865.199097</ymin>
+            <xmax>1706.111450</xmax>
+            <ymax>924.144470</ymax>
+        </bndbox>
+    </object>
+</annotation>
