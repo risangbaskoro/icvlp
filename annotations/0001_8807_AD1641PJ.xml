@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_8807_AD1641PJ.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>368.808319</xmin>
+            <ymin>961.110168</ymin>
+            <xmax>670.651001</xmax>
+            <ymax>1055.023193</ymax>
+        </bndbox>
+    </object>
+</annotation>

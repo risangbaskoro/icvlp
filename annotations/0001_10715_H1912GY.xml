@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_10715_H1912GY.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>773.597412</xmin>
+            <ymin>954.116638</ymin>
+            <xmax>1004.477112</xmax>
+            <ymax>1037.039795</ymax>
+        </bndbox>
+    </object>
+</annotation>
