@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_8378_AA1832EB.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>1293.326538</xmin>
+            <ymin>954.116638</ymin>
+            <xmax>1494.221802</xmax>
+            <ymax>1007.067566</ymax>
+        </bndbox>
+    </object>
+</annotation>
