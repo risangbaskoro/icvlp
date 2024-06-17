@@ -1,6 +1,6 @@
 <annotation>
     <folder>frames</folder>
-    <filename>0001_3015_AB9260HN.jpeg</filename>
+    <filename>0001_7285_AD1322KJ.jpeg</filename>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -13,10 +13,10 @@
         <occluded>0</occluded>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>903.529724</xmin>
-            <ymin>763.293518</ymin>
-            <xmax>1106.423950</xmax>
-            <ymax>824.237061</ymax>
+            <xmin>878.542725</xmin>
+            <ymin>883.182434</ymin>
+            <xmax>1067.444336</xmax>
+            <ymax>938.131531</ymax>
         </bndbox>
     </object>
 </annotation>
