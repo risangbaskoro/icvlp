@@ -1,6 +1,6 @@
 <annotation>
     <folder>frames</folder>
-    <filename>0001_4020_AD1486ZJ.jpeg</filename>
+    <filename>0001_4045_AD1486ZJ.jpeg</filename>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -13,10 +13,10 @@
         <occluded>0</occluded>
         <difficult>0</difficult>
         <bndbox>
-            <xmin>898.532288</xmin>
-            <ymin>871.193542</ymin>
-            <xmax>1076.439575</xmax>
-            <ymax>960.111145</ymax>
+            <xmin>1096.429199</xmin>
+            <ymin>876.188904</ymin>
+            <xmax>1274.336426</xmax>
+            <ymax>965.106506</ymax>
         </bndbox>
     </object>
 </annotation>
