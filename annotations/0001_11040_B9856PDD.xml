@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_11040_B9856PDD.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>993.482788</xmin>
+            <ymin>750.305542</ymin>
+            <xmax>1119.417114</xmax>
+            <ymax>795.263855</ymax>
+        </bndbox>
+    </object>
+</annotation>
