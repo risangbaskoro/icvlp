@@ -20,8 +20,13 @@ def extract_frame(video_path, output_dir, plate, instance_num):
     label = plate['label']
 
     plates_extracted = 0
-    for frame in plate['frames']:
+    for frame in (pbar := tqdm(plate['frames'],
+                               desc=label,
+                               leave=False)):
         output_name = f"{label}_{instance_num + 1}.jpeg"
+
+        pbar.set_description(output_name)
+
         output_path = os.path.join(output_dir, output_name)
         frame_number = frame['frame']
         bbox = frame['bbox']
