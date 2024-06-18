@@ -30,7 +30,7 @@ def extract_frame(video_path, output_dir, plate, instance_num):
         output_path = os.path.join(output_dir, output_name)
         frame_number = frame['frame']
         bbox = frame['bbox']
-        cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
+        cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number - 1)
         ret, image = cap.read()
 
         # y_min:y_max, x_min:x_max
