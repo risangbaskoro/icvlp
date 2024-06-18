@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_15875_AB8250ZY.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>948.506226</xmin>
+            <ymin>806.253723</ymin>
+            <xmax>1164.393677</xmax>
+            <ymax>880.185181</ymax>
+        </bndbox>
+    </object>
+</annotation>
