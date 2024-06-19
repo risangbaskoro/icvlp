@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_12385_AB8651OE.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>1425.257812</xmin>
+            <ymin>935.134277</ymin>
+            <xmax>1675.127563</xmax>
+            <ymax>1022.053711</ymax>
+        </bndbox>
+    </object>
+</annotation>
