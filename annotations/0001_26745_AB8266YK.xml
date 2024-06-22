@@ -1,6 +1,6 @@
 <annotation>
     <folder>frames</folder>
-    <filename>0001_24842_AB8905UK.jpeg</filename>
+    <filename>0001_26745_AB8266YK.jpeg</filename>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -11,12 +11,12 @@
         <pose>Unspecified</pose>
         <truncated>0</truncated>
         <occluded>0</occluded>
-        <difficult>1</difficult>
+        <difficult>0</difficult>
         <bndbox>
-            <xmin>105.945312</xmin>
-            <ymin>912.155579</ymin>
-            <xmax>261.864075</xmax>
-            <ymax>1004.070435</ymax>
+            <xmin>1512.212524</xmin>
+            <ymin>834.227783</ymin>
+            <xmax>1693.118286</xmax>
+            <ymax>905.162048</ymax>
         </bndbox>
     </object>
 </annotation>
