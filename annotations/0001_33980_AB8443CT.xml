@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_33980_AB8443CT.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>884.539612</xmin>
+            <ymin>908.159241</ymin>
+            <xmax>1182.384399</xmax>
+            <ymax>982.090698</ymax>
+        </bndbox>
+    </object>
+</annotation>

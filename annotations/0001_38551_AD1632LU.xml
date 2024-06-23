@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_38551_AD1632LU.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>476.752075</xmin>
+            <ymin>1000.074097</ymin>
+            <xmax>754.607300</xmax>
+            <ymax>1059.019409</ymax>
+        </bndbox>
+    </object>
+</annotation>

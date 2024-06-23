@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_40160_AB8527AU.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>1033.462036</xmin>
+            <ymin>878.187012</ymin>
+            <xmax>1168.391724</xmax>
+            <ymax>934.135132</ymax>
+        </bndbox>
+    </object>
+</annotation>
