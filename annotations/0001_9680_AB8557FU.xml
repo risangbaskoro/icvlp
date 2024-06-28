@@ -1,0 +1,22 @@
+<annotation>
+    <folder>frames</folder>
+    <filename>0001_9680_AB8557FU.jpeg</filename>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>plate-single_axle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>1139.406738</xmin>
+            <ymin>814.246277</ymin>
+            <xmax>1267.340088</xmax>
+            <ymax>869.195374</ymax>
+        </bndbox>
+    </object>
+</annotation>
